@@ -1,0 +1,1399 @@
+/* ------------------ Reset y Body ------------------ */
+body {
+  padding-top: 0 !important;
+  margin: 0;
+}
+
+/* ------------------ Navbar ------------------ */
+.navbar-custom {
+  background: rgba(255, 255, 255, 0) !important;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  padding: 0.3rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
+.navbar-custom.scrolled {
+  background-color: rgb(255, 255, 255) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Logo */
+.logo {
+  width: 115px;
+  height: 115px;
+  border-radius: 25%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Fondo del menú derecho */
+.navbar-nav {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 5px 15px;
+  margin-top: 8px;
+}
+
+.nav-link {
+  color: #1b5e20 !important;
+  font-weight: 600;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2e7d32 !important;
+  background: rgba(200, 230, 201, 0.6);
+  border-radius: 8px;
+}
+
+.navbar-custom.scrolled .navbar-nav {
+  background: rgba(27, 94, 32, 0.9);
+}
+
+.navbar-custom.scrolled .nav-link {
+  color: white !important;
+}
+
+.navbar-custom.scrolled .nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ------------------ Carrusel en Index ------------------ */
+#inicio {
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+}
+
+#carouselARUC {
+  position: relative;
+  z-index: 1;
+}
+
+#inicio .carousel {
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+#inicio .carousel-inner {
+  height: 100vh;
+  min-height: 600px;
+}
+
+#inicio .carousel-item {
+  height: 100%;
+}
+
+#inicio .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* ------------------ Hero / Imagen superior ------------------ */
+.hero {
+  background-image: url('../img/quienes_somos.jpeg');
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 0;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .overlay {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1rem;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.titulo {
+  color: #1b5e20 !important;
+}
+
+/* ------------------ Misión y Visión ------------------ */
+.mision-vision h2 {
+  color: #1b5e20;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mision-vision p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* ------------------ Indicador de sección ------------------ */
+.breadcrumb-custom {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  padding: 1rem 0;
+  color: white;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-custom a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.breadcrumb-custom a:hover {
+  color: #c8ffc8;
+  text-decoration: none;
+}
+
+
+.breadcrumb-custom strong {
+  font-weight: 700;
+}
+
+/* ------------------ Trayectoria / Historia ------------------ */
+.trayectoria {
+  background-image: url('../img/fondo_trayectoria.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.trayectoria-overlay {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 3rem 0;
+}
+
+.trayectoria h2 {
+  color: #1b5e20;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.trayectoria p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+/* ------------------ Miembros ------------------ */
+.equipo h2 {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.card-miembro {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.card-miembro:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------ Mejoras para las fotos de miembros ------------------ */
+.foto-miembro {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.foto-miembro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* Enfoca en la parte superior para retratos */
+  transition: transform 0.3s ease;
+}
+
+.card-miembro:hover .foto-miembro img {
+  transform: scale(1.05);
+}
+
+/* Estilo para cuando no hay imagen */
+.foto-miembro.sin-imagen {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}
+
+/* ------------------ Presidentes Municipales ------------------ */
+.presidentes-municipales h2 {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.info-miembro .municipio {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.info-miembro .cargo {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* ------------------ Responsive para fotos ------------------ */
+@media (max-width: 768px) {
+  .foto-miembro {
+    height: 300PX;
+  }
+
+  .equipo .col-md-6.col-lg-4,
+  .presidentes-municipales .col-md-6.col-lg-4 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ------------------ Efectos de hover mejorados ------------------ */
+.card-miembro {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #e8f5e9;
+}
+
+.card-miembro:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(27, 94, 32, 0.15);
+  border-color: #2e7d32;
+}
+
+.info-miembro {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.info-miembro h5 {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.info-miembro .cargo {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+/* ------------------ Separación entre secciones ------------------ */
+.equipo {
+  padding-bottom: 2rem;
+}
+
+.presidentes-municipales {
+  padding-top: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 20px;
+  margin: 3rem auto;
+  padding: 3rem 1rem;
+}
+
+
+
+
+/* ------------------ Aliados ------------------ */
+.aliados h2 {
+  color: #1b5e20;
+  margin-bottom: 2rem;
+}
+
+.aliados h3 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.aliados img {
+  max-height: 150px;
+  transition: transform 0.4s;
+  padding: 10px;
+}
+
+.aliados img:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------ Carrusel de Aliados ------------------ */
+#carouselAliados {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+#carouselAliados .carousel-inner {
+  padding: 20px 0;
+}
+
+#carouselAliados .carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Ocultar controles del carrusel */
+#carouselAliados .carousel-control-prev,
+#carouselAliados .carousel-control-next {
+  display: none;
+}
+
+/* Centrar logos en el carrusel */
+#carouselAliados .row.justify-content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive para el carrusel */
+@media (max-width: 768px) {
+  #carouselAliados img {
+    max-height: 150px;
+  }
+
+  .aliados .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.aliados .col-lg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------ Footer ------------------ */
+footer {
+  background-color: #1b5e20;
+}
+
+footer a {
+  color: white;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #c8e6c9;
+  text-decoration: underline;
+}
+
+/* ------------------ Espaciados generales ------------------ */
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+section#inicio {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.container h2 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* ------------------ Ajustes responsivos generales ------------------ */
+@media (max-width: 991px) {
+  .navbar-nav {
+    background: rgba(27, 94, 32, 0.95);
+    margin-top: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+  #inicio .carousel-inner {
+    height: 70vh;
+    min-height: 400px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Ajustes para tarjetas de miembros en móviles */
+  .equipo .col-md-6.col-lg-4 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ------------------ Ajuste breadcrumb debajo del navbar ------------------ */
+.debajo-navbar {
+  margin-top: 130px;
+}
+
+/* ------------------ Galería de imágenes productivas - 3 fotos ------------------ */
+.imagen-productiva {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  height: 280px;
+}
+
+.imagen-productiva:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.imagen-productiva img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.imagen-productiva:hover img {
+  transform: scale(1.1);
+}
+
+.overlay-texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(27, 94, 32, 0.95), transparent);
+  padding: 1.5rem 1rem 1rem 1rem;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.overlay-texto p {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.imagen-productiva:hover .overlay-texto {
+  transform: translateY(-5px);
+}
+
+/* ------------------ SECCIÓN LOGROS ------------------ */
+.logros {
+  background: #f9f9f9;
+  padding: 4rem 0 6rem 0;
+}
+
+.titulo-logros {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.lista-logros {
+  list-style: none;
+  padding: 0;
+  max-width: 900px;
+}
+
+.lista-logros li {
+  background: #fff;
+  margin-bottom: 0.8rem;
+  padding: 1rem 1.2rem;
+  border-left: 5px solid #2e7d32;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.lista-logros li:hover {
+  transform: translateX(5px);
+  background-color: #e8f5e9;
+}
+
+/* ------------------ Imágenes decorativas ------------------ */
+.sombra-imagen {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.sombra-imagen:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------ Líneas Productivas (lista) ------------------ */
+.subtitulo-lineas {
+  color: #1b5e20;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.lineas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e8f5e9 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lista-lineas {
+  flex: 1 1 40%;
+  list-style: none;
+  padding: 0;
+}
+
+.lista-lineas li {
+  font-size: 1.1rem;
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, color 0.3s;
+}
+
+.lista-lineas li i {
+  color: #43a047;
+  font-size: 1.2rem;
+}
+
+.lista-lineas li:hover {
+  transform: translateX(6px);
+  color: #1b5e20;
+}
+
+/* ------------------ Animaciones suaves ------------------ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeInRight 1s ease forwards;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ------------------ Responsive para galería ------------------ */
+@media (max-width: 768px) {
+  .lineas-container {
+    flex-direction: column;
+  }
+
+  .sombra-imagen {
+    margin-bottom: 1rem;
+  }
+
+  .imagen-productiva {
+    height: 220px;
+  }
+
+  /* Ajustes de texto justificado en móviles */
+  .mision-vision p,
+  .trayectoria p {
+    text-align: left;
+  }
+}
+
+/* Color para el ícono del menú (hamburguesa) */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(212,175,55)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* ------------------ DERECHOS DEL CAMPESINADO ------------------ */
+.derechos-campesinos {
+  background: linear-gradient(135deg, #f1f8f4 0%, #e8f5e9 100%);
+}
+
+.titulo-derechos {
+  color: #1b5e20;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.titulo-derechos::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2e7d32, #43a047);
+  border-radius: 2px;
+}
+
+/* Tarjetas de derechos */
+.card-derecho {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  height: 100%;
+  border-top: 4px solid #2e7d32;
+}
+
+.card-derecho:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-top-color: #43a047;
+}
+
+.icono-derecho {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  transition: transform 0.3s ease;
+}
+
+.card-derecho:hover .icono-derecho {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.icono-derecho i {
+  font-size: 2rem;
+  color: white;
+}
+
+.card-derecho h4 {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-derecho p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin: 0;
+}
+
+.card-derecho strong {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+/* Artículo 64 destacado */
+.articulo-destacado {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(27, 94, 32, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.articulo-destacado::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.encabezado-articulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.encabezado-articulo i {
+  font-size: 2.5rem;
+  color: #ffd700;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+.encabezado-articulo h3 {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.texto-articulo {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.9;
+  text-align: center;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-derecho {
+    margin-bottom: 1.5rem;
+  }
+
+  .articulo-destacado {
+    padding: 2rem 1.5rem;
+  }
+
+  .encabezado-articulo h3 {
+    font-size: 1.5rem;
+  }
+
+  .texto-articulo {
+    font-size: 1.05rem;
+    text-align: justify;
+  }
+
+  .card-derecho p {
+    text-align: left;
+  }
+}
+
+/* ------------------ Hero de Logros (solo imagen, sin texto) ------------------ */
+.hero-logros {
+  background-image: url('../img/logro2.jpg');
+  /* O .JPG según tu archivo */
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-end;
+  /* Coloca el breadcrumb en la parte inferior */
+}
+
+.hero-logros::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Breadcrumb dentro del hero */
+.breadcrumb-absolute {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-bottom: 0;
+  /* Sin espacio debajo */
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .hero-logros {
+    height: 300px;
+  }
+}
+
+/* ------------------ FORMULARIO DE AFILIACIÓN ------------------ */
+.formulario-afiliacion {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+/* Encabezado */
+.encabezado-formulario {
+  background: white;
+  padding: 1.5rem;
+  border: 2px solid #1b5e20;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.fila-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: nowrap;
+}
+
+.logos-pequenos {
+  display: flex;
+  gap: 1.5rem;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.logo-pequeno {
+  width: auto;
+  height: 110px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-central {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.titulo-principal {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.organizacion-linea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.texto-organizacion {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.seleccion-organizacion {
+  width: auto;
+  min-width: 200px;
+  display: inline-block;
+}
+
+.espacio-foto {
+  flex: 0 0 auto;
+}
+
+.contenedor-foto {
+  border: 2px dashed #6c757d;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  width: 130px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separador {
+  border: 2px solid #1b5e20;
+  margin: 2rem 0;
+}
+
+/* Secciones */
+.seccion-formulario {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #1b5e20;
+}
+
+.titulo-seccion {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #2e7d32;
+}
+
+/* Campos dinámicos */
+.familiar-row,
+.agricola-row,
+.pecuaria-row {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.btn-eliminar-familiar,
+.btn-eliminar-agricola,
+.btn-eliminar-pecuaria {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Firmas */
+.firmas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.firma-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.firma-item p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Normativas */
+.normativas-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* Botones */
+.botones-container {
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.btn-success {
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+  font-weight: 600;
+}
+
+.btn-success:hover {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.btn-primary {
+  background-color: #1565c0;
+  border-color: #1565c0;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+}
+
+/* Validación */
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+/* Modal de éxito */
+.modal-success .modal-header {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formulario-afiliacion {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .fila-superior {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logos-pequenos {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .logo-pequeno {
+    height: 60px;
+  }
+
+  .organizacion-linea {
+    flex-direction: column;
+  }
+
+  .seleccion-organizacion {
+    width: 100%;
+  }
+
+  .contenedor-foto {
+    width: 80px;
+    height: 100px;
+  }
+
+  .seccion-formulario {
+    padding: 1rem;
+  }
+
+  .botones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .botones-container .btn {
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+
+/* ------------------ MUNICIPIOS ------------------ */
+
+/* Hero específico para municipios */
+.hero[style*="municipios_hero.jpg"] {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+/* Tarjetas de municipios */
+.card-municipio {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card-municipio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(27, 94, 32, 0.15);
+}
+
+.foto-municipio {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.foto-municipio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-municipio:hover .foto-municipio img {
+  transform: scale(1.05);
+}
+
+.nombre-municipio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(27, 94, 32, 0.9), transparent);
+  color: white;
+  padding: 1rem 1rem 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.card-municipio .card-body {
+  padding: 1.5rem;
+}
+
+.card-municipio .card-title {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e8f5e9;
+  padding-bottom: 0.5rem;
+}
+
+.info-presidente h6,
+.contacto-info h6 {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.contacto-info p {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-municipio .card-footer {
+  border-top: 1px solid #e8f5e9;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Mapa simbólico */
+.mapa-simbólico img {
+  max-height: 300px;
+  border: 2px solid #1b5e20;
+}
+
+/* Filtro de búsqueda */
+#filtroMunicipios {
+  border-radius: 10px;
+  border: 2px solid #1b5e20;
+  padding: 0.75rem 1rem;
+}
+
+#filtroMunicipios:focus {
+  box-shadow: 0 0 0 0.2rem rgba(27, 94, 32, 0.25);
+  border-color: #2e7d32;
+}
+
+.input-group-text {
+  background-color: #1b5e20;
+  color: white;
+  border: 2px solid #1b5e20;
+  border-right: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero[style*="municipios_hero.jpg"] {
+    height: 300px;
+  }
+
+  .foto-municipio {
+    height: 180px;
+  }
+
+  .card-municipio .card-body {
+    padding: 1rem;
+  }
+}
+
+/* ------------------ PROYECTOS ------------------ */
+.proyectos-hero {
+  background: linear-gradient(rgba(27, 94, 32, 0.8), rgba(27, 94, 32, 0.9)), url('img/proyectos-bg.jpg') center/cover;
+  color: white;
+  padding: 100px 0 60px;
+  margin-top: 76px;
+}
+
+.filtros-proyectos {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.btn-filtro {
+  margin: 0 5px;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+.btn-filtro.active {
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.card-proyecto {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+}
+
+.card-proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-proyecto {
+  height: 280px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.badge-estado {
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.badge-ejecutado {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-ejecucion {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.campesinos-beneficiarios {
+  background-color: #e8f5e9;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+}
+
+.empty-state i {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #ced4da;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: #1b5e20;
+  margin-bottom: 1rem;
+}
+
+.proyecto-objetivo {
+  margin-bottom: 1rem;
+}

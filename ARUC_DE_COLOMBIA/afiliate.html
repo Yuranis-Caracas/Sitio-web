@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Afiliación - ARUC</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+  <link rel="shortcut icon" href="img/logo_aruc.jpeg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.php">
+          <img src="img/logo_aruc.jpeg" alt="Logo ARUC" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuARUC">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="menuARUC">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i
+                  class="bi bi-people-fill me-1"></i>Quiénes somos</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="quienes_somos.html">Nuestra historia</a></li>
+                <li><a class="dropdown-item" href="logros.html">Logros</a></li>
+                <li><a class="dropdown-item" href="documentos_aruc/validar_acceso_documentos.php">Documentos
+                    Institucionales</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reglamentacioncampe.html"><i
+                  class="bi bi-file-earmark-text me-1"></i>Reglamentación del Campesinado</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="municipios.html"><i
+                  class="bi bi-geo-alt-fill me-1"></i>Municipios</a></li>
+            <li class="nav-item"><a class="nav-link" href="proyectos.html"><i
+                  class="bi bi-calendar-event me-1"></i>Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventos.php"><i
+                  class="bi bi-calendar-event me-1"></i>Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="afiliate.html"><i
+                  class="bi bi-person-plus-fill me-1"></i>Afíliate</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb-custom debajo-navbar">
+    <div class="container">
+      <p class="mb-0">
+        <a href="index.php">Inicio</a> | <i class="bi bi-eye-fill me-2"></i>Estás viendo: <strong>Afíliate</strong>
+      </p>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="formulario-afiliacion">
+      <form id="formAfiliacion" action="php/guardar_afiliacion.php" method="POST" enctype="multipart/form-data"
+        novalidate>
+        <!-- Encabezado del formulario -->
+        <div class="encabezado-formulario">
+          <div class="fila-superior">
+            <div class="logos-pequenos">
+              <img src="img/logo_aruc.jpeg" alt="Logo ARUC" class="logo-pequeno">
+              <img src="img/logo_anuc.jpg" alt="Logo ANUC" class="logo-pequeno">
+            </div>
+
+            <div class="titulo-central">
+              <h1 class="titulo-principal">FORMULARIO DE INSCRIPCIÓN</h1>
+              <div class="organizacion-linea">
+                <span class="texto-organizacion">ASOCIACIÓN NACIONAL DE USUARIOS CAMPESINOS –</span>
+                <select name="organizacion" id="organizacion" class="form-select seleccion-organizacion" required>
+                  <option value="">Seleccionar asociación</option>
+                  <option value="Buenos Aires">Buenos Aires</option>
+                  <option value="Caldono">Caldono</option>
+                  <option value="Corinto">Corinto</option>
+                  <option value="Miranda">Miranda</option>
+                  <option value="Quilichao">Quilichao</option>
+                  <option value="Otra">Otra</option>
+                </select>
+              </div>
+            </div>
+            <div class="espacio-foto">
+              <div class="contenedor-foto">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campo para otra organización -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-6 d-none" id="otraOrgDiv">
+            <label class="form-label">Especifique la organización</label>
+            <input type="text" name="otra_organizacion" id="otra_organizacion" class="form-control">
+          </div>
+        </div>
+
+        <hr class="separador">
+
+        <!-- DATOS PERSONALES -->
+        <section class="seccion-formulario">
+          <h3 class="titulo-seccion">Datos personales</h3>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Primer apellido *</label>
+              <input type="text" name="primer_apellido" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Segundo apellido</label>
+              <input type="text" name="segundo_apellido" class="form-control">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Nombres *</label>
+              <input type="text" name="nombres" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">N° de cédula *</label>
+              <input type="text" name="cedula" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Fecha de expedición *</label>
+              <input type="date" name="fecha_expedicion" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Lugar de expedición *</label>
+              <input type="text" name="lugar_expedicion" class="form-control" required>
+            </div>
+
+            <div class="col-md-3">
+              <label class="form-label">Edad *</label>
+              <input type="number" name="edad" min="18" max="120" class="form-control" required>
+            </div>
+            <div class="col-md-5">
+              <label class="form-label">Ocupación *</label>
+              <input type="text" name="ocupacion" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Departamento *</label>
+              <input type="text" name="departamento" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">Municipio *</label>
+              <input type="text" name="municipio" class="form-control" required>
+            </div>
+            <div class="col-md-5">
+              <label class="form-label">Dirección / Vereda *</label>
+              <input type="text" name="direccion" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">EPS *</label>
+              <input type="text" name="eps" class="form-control" required>
+            </div>
+
+            <div class="col-md-4">
+              <label class="form-label">Puntaje SISBEN</label>
+              <input type="text" name="grupo_sisben" class="form-control">
+            </div>
+            <div class="col-md-8">
+              <label class="form-label d-block">Se identifica como campesino *</label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="campesino" id="campesinoSi" value="Si" required>
+                <label class="form-check-label" for="campesinoSi">Sí</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="campesino" id="campesinoNo" value="No" required>
+                <label class="form-check-label" for="campesinoNo">No</label>
+              </div>
+              <div class="form-text">El campesinado es sujeto de derecho mediante el acto legislativo 01 de 2023.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GRUPO FAMILIAR -->
+        <section class="seccion-formulario">
+          <h3 class="titulo-seccion">Información básica del grupo familiar del asociado</h3>
+          <div id="familiaresContainer" class="mb-3"></div>
+          <div class="mb-3">
+            <button type="button" id="btnAgregarFamiliar" class="btn btn-outline-success btn-sm">+ Agregar
+              familiar</button>
+          </div>
+        </section>
+
+        <!-- INFORMACIÓN SOCIOECONÓMICA -->
+        <section class="seccion-formulario">
+          <h3 class="titulo-seccion">Información socioeconómica</h3>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label class="form-label">¿Tiene predio?</label>
+              <select name="predio" id="predioSelect" class="form-select">
+                <option value="Si" selected>Sí</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+
+            <div id="predioCampos" class="col-12">
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <label class="form-label">Nombre del predio</label>
+                  <input type="text" name="nombre_predio" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Titularidad</label>
+                  <select name="titularidad" class="form-select">
+                    <option value="">Seleccione...</option>
+                    <option value="Sana posesión">Sana posesión</option>
+                    <option value="Propio">Propio</option>
+                    <option value="Arriendo">Arriendo</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">¿Tiene certificado de tradición o sana posesión?</label>
+                  <select name="sana_posesion_cer_tradicion" class="form-select">
+                    <option value="">Seleccione...</option>
+                    <option value="Si">Sí</option>
+                    <option value="No">No</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Área total del predio (m²)</label>
+                  <input type="text" name="area_predio" class="form-control">
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Ubicación del predio</label>
+                  <input type="text" name="ubicacion_predio" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ACTIVIDADES PRODUCTIVAS -->
+        <section class="seccion-formulario">
+          <h3 class="titulo-seccion">Actividades productivas</h3>
+
+          <div class="mb-3">
+            <label class="form-label d-block fw-bold">¿Realiza actividades agrícolas?</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="realiza_agricola" id="agricola_si" value="Si">
+              <label class="form-check-label" for="agricola_si">Sí</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="realiza_agricola" id="agricola_no" value="No" checked>
+              <label class="form-check-label" for="agricola_no">No</label>
+            </div>
+          </div>
+
+          <div id="seccion_agricola" class="d-none">
+            <div id="agricolasContainer" class="mb-3"></div>
+            <div class="mb-3">
+              <button type="button" id="btnAgregarAgricola" class="btn btn-outline-success btn-sm">+ Agregar actividad
+                agrícola</button>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label d-block fw-bold">¿Realiza actividades pecuarias?</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="realiza_pecuaria" id="pecuaria_si" value="Si">
+              <label class="form-check-label" for="pecuaria_si">Sí</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="realiza_pecuaria" id="pecuaria_no" value="No" checked>
+              <label class="form-check-label" for="pecuaria_no">No</label>
+            </div>
+          </div>
+
+          <div id="seccion_pecuaria" class="d-none">
+            <div id="pecuariasContainer" class="mb-3"></div>
+            <div class="mb-3">
+              <button type="button" id="btnAgregarPecuaria" class="btn btn-outline-success btn-sm">+ Agregar actividad
+                pecuaria</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ARCHIVOS ADJUNTOS -->
+        <section class="seccion-formulario">
+          <h3 class="titulo-seccion">Archivos adjuntos</h3>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Foto (JPG/PNG) *</label>
+              <input type="file" name="foto" id="foto" accept=".jpg,.jpeg,.png" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Copia de cédula (PDF) *</label>
+              <input type="file" name="copia_cedula" id="copia_cedula" accept="application/pdf" class="form-control"
+                required>
+            </div>
+          </div>
+        </section>
+
+        <!-- FIRMAS -->
+        <section class="seccion-formulario">
+          <h3 class="titulo-seccion">Firmas</h3>
+          <div class="firmas-container">
+            <div class="firma-item">
+              <p>Firma del solicitante: ____________________________</p>
+              <p>Nombres y apellidos: ____________________________</p>
+              <p>Cédula: ______________</p>
+            </div>
+            <div class="firma-item">
+              <p>Firma de quien diligencia: ________________________</p>
+              <p>Nombres y apellidos: ____________________________</p>
+              <p>Cédula: ______________</p>
+            </div>
+            <div class="firma-item">
+              <p>Firma representante legal: ________________________</p>
+              <p>Nombres y apellidos: ____________________________</p>
+              <p>Cédula: ______________</p>
+            </div>
+            <div class="firma-item">
+              <p>Paga inscripción: SI_______ No_______</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- NORMATIVAS -->
+        <section class="seccion-formulario">
+          <h3 class="titulo-seccion">Normativas</h3>
+          <div class="normativas-container">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="aceptoEstatutos" name="aceptoEstatutos" required>
+              <label class="form-check-label" for="aceptoEstatutos">Acepto estatutos y reglamentos de la ANUC Y ARUC DE
+                COLOMBIA</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="aceptoDatos" name="aceptoDatos" required>
+              <label class="form-check-label" for="aceptoDatos">Acepto el tratamiento de mis datos personales conforme a
+                la Ley 1581 de 2012</label>
+            </div>
+            <p class="small text-muted mt-2">Nota Legal: La información registrada será tratada conforme a la Ley 1581
+              de 2012 sobre protección de datos personales.</p>
+          </div>
+        </section>
+
+        <!-- BOTON -->
+        <div class="botones-container text-center py-4">
+          <button type="submit" class="btn btn-success btn-lg px-5">Enviar afiliación</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal de éxito -->
+  <div class="modal fade" id="modalExito" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">¡Solicitud Enviada!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="bi bi-check-circle-fill text-success display-4 mb-3"></i>
+          <p class="lead">Solicitud enviada con éxito, por favor diríjase a la oficina para finalizar el proceso.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center text-white py-4" style="background-color: #1b5e20;">
+    <p class="mb-1">© 2025 Asociación Regional de Usuarios Campesinos del Suroccidente Colombiano (ARUC DE COLOMBIA)</p>
+    <p class="small">
+      <a href="politica_de_privacidad.html" class="text-white text-decoration-underline">Política de Privacidad</a> |
+      <a href="terminos_condiciones.html" class="text-white text-decoration-underline">Términos y Condiciones</a>
+    </p>
+    <div>
+      <a href="https://www.facebook.com/share/14SqWHbb2Cb/" class="text-white me-3" target="_blank"><i
+          class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/aruccolombia?igsh=MWo0NTBidzJrdDEwdg==" class="text-white me-3"
+        target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="mailto:cooperativaaruc@gmail.com" class="text-white"><i class="bi bi-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Función para mostrar/ocultar organización del familiar
+    function toggleOrganizacionFamiliar(index, valor) {
+      const orgDiv = document.getElementById(`org-familiar-${index}`);
+      if (valor === 'Si') {
+        orgDiv.classList.remove('d-none');
+      } else {
+        orgDiv.classList.add('d-none');
+      }
+    }
+
+    // Efecto scroll para navbar
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar-custom');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+<script>
+  const cedulaInput = document.querySelector('input[name="cedula"]');
+  const formulario = document.getElementById('formAfiliacion');
+
+  cedulaInput.addEventListener('input', function () {
+    const cedula = cedulaInput.value.trim();
+
+    if (cedula.length < 5) {
+      mostrarMensaje('');
+      habilitarFormulario(true);
+      return;
+    }
+
+    fetch(`php/validar_cedula.php?cedula=${cedula}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.existe) {
+          mostrarMensaje('Registro duplicado: la cédula ya está asociada a un usuario.', 'red');
+          habilitarFormulario(false);
+        } else {
+          mostrarMensaje('Cédula disponible para registro.', 'green');
+          habilitarFormulario(true);
+        }
+      });
+  });
+
+  function mostrarMensaje(mensaje, color = 'black') {
+    let msgDiv = document.getElementById('msgCedula');
+    if (!msgDiv) {
+      msgDiv = document.createElement('div');
+      msgDiv.id = 'msgCedula';
+      msgDiv.style.fontWeight = 'bold';
+      cedulaInput.parentNode.appendChild(msgDiv);
+    }
+    msgDiv.textContent = mensaje;
+    msgDiv.style.color = color;
+  }
+
+  function habilitarFormulario(estado) {
+    const elementos = formulario.querySelectorAll('input, select, textarea, button');
+
+    elementos.forEach(el => {
+      if (el.name !== 'cedula') {
+        el.disabled = !estado;
+      }
+    });
+
+    formulario.style.opacity = estado ? '1' : '0.6';
+  }
+</script>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos - ARUC DE COLOMBIA</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png">
+  <link rel="shortcut icon" href="img/logo_aruc.jpeg" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.php">
+          <img src="img/logo_aruc.jpeg" alt="Logo ARUC" class="logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuARUC"
+          aria-controls="menuARUC" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menuARUC">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i
+                  class="bi bi-people-fill me-1"></i>Quiénes somos</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="quienes_somos.html">Nuestra historia</a></li>
+                <li><a class="dropdown-item" href="logros.html">Logros</a></li>
+                <li><a class="dropdown-item" href="documentos_aruc/validar_acceso_documentos.php">Documentos
+                    Institucionales</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reglamentacioncampe.html"><i
+                  class="bi bi-file-earmark-text me-1"></i>Reglamentación del Campesinado</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="municipios.html"><i
+                  class="bi bi-geo-alt-fill me-1"></i>Municipios</a></li>
+            <li class="nav-item"><a class="nav-link active" href="proyectos.html"><i
+                  class="bi bi-calendar-event me-1"></i>Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventos.php"><i
+                  class="bi bi-calendar-event me-1"></i>Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="afiliate.html"><i
+                  class="bi bi-person-plus-fill me-1"></i>Afíliate</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breadcrumb-custom debajo-navbar">
+    <div class="container">
+      <p class="mb-0">
+        <a href="index.php">Inicio</a> | <i class="bi bi-eye-fill me-2"></i>Estás viendo: <strong>Afíliate</strong>
+      </p>
+    </div>
+  </div>
+
+  <section class="proyectos-hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="mb-4">Nuestros Proyectos</h1>
+          <p class="lead">Conoce las iniciativas que estamos desarrollando para mejorar la calidad de vida del
+            campesinado en el suroccidente colombiano.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="filtros-proyectos">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h3 class="mb-3">Filtrar por estado</h3>
+          <div class="btn-group" role="group" aria-label="Filtros de proyectos">
+            <button type="button" class="btn btn-outline-success btn-filtro active" data-filter="todos">Todos</button>
+            <button type="button" class="btn btn-outline-success btn-filtro"
+              data-filter="ejecutados">Ejecutados</button>
+            <button type="button" class="btn btn-outline-success btn-filtro" data-filter="ejecucion">En
+              Ejecución</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row" id="proyectos-container">
+        <div class="col-lg-6 mb-4 proyecto-item" data-estado="ejecutados">
+          <div class="card card-proyecto h-100">
+            <div class="position-relative">
+              <img src="img/proyecto1.png" class="card-img-top img-proyecto" alt="Proyecto de Agricultura Sostenible">
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3">
+                <span class="badge badge-estado badge-ejecutado">Ejecutado</span>
+              </div>
+              <h4 class="card-title">Memoria Campesina</h4>
+              <div class="proyecto-objetivo">
+                <strong>Objetivo:</strong> <br><strong>1. </strong>Reconstruir la memoria histórica de la cultura
+                campesina en Santander de Quilichao que permita salvaguardar su riqueza
+                <br><strong>2. </strong>Realizar un proceso de formación en artesanías, danza y creación de contenidos
+                audiovisuales que faciliten la transmisión de saberes conocimientos propios de la cultura campesina.<br>
+                <strong>3. </strong>Realizar un evento artístico cultural que visibilice la identidad, tradición y
+                saberes del campesino de Santander de Quilichao
+
+              </div>
+              <div class="campesinos-beneficiarios">
+                <p class="mb-0"><strong>Campesinos beneficiarios:</strong><br> 50 familias de ANUC Quilichao</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4 proyecto-item" data-estado="ejecutados">
+          <div class="card card-proyecto h-100">
+            <div class="position-relative">
+              <img src="img/proyecto2.png" class="card-img-top img-proyecto" alt="Proyecto de Capacitación">
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3">
+                <span class="badge badge-estado badge-ejecutado">Ejecutado</span>
+              </div>
+              <h4 class="card-title">Control Ciudadano al Plan de Desarrollo Municipal</h4>
+              <div class="proyecto-objetivo">
+                <strong>Objetivo:</strong> ...
+              </div>
+              <div class="campesinos-beneficiarios">
+                <p class="mb-0"><strong>Campesinos beneficiarios:</strong><br> 35 Jóvenes campesinos de ANUC Quilichao
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4 proyecto-item" data-estado="ejecutados">
+          <div class="card card-proyecto h-100">
+            <div class="position-relative">
+              <img src="img/proyecto3.png" class="card-img-top img-proyecto" alt="Proyecto de Comercio Justo">
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3">
+                <span class="badge badge-estado badge-ejecutado">Ejecutado</span>
+              </div>
+              <h4 class="card-title">Control Medioambiental a la Cuenca del Río Quilichao</h4>
+              <div class="proyecto-objetivo">
+                <strong>Objetivo:</strong> ...
+              </div>
+              <div class="campesinos-beneficiarios">
+                <p class="mb-0"><strong>Campesinos beneficiarios:</strong><br> 80 Campesino de ANUC Quilichao</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4 proyecto-item" data-estado="ejecucion">
+          <div class="card card-proyecto h-100">
+            <div class="position-relative">
+              <img src="img/proyecto4.png" class="card-img-top img-proyecto" alt="Proyecto de Acceso al Agua">
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3">
+                <span class="badge badge-estado badge-ejecucion">En Ejecución</span>
+              </div>
+              <h4 class="card-title">Apuesta de Desarrollo Rural e Integral para el Norte del Cauca</h4>
+              <div class="proyecto-objetivo">
+                <strong>Objetivo:</strong> ...
+              </div>
+              <div class="campesinos-beneficiarios">
+                <p class="mb-0"><strong>Campesinos beneficiarios:</strong> <br>1.511 Campesinos del Norte del Cauca</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-none" id="empty-state">
+          <div class="col-12">
+            <div class="empty-state">
+              <i class="bi bi-inbox"></i>
+              <h3>No hay proyectos que coincidan con el filtro seleccionado</h3>
+              <p>Intenta con otro filtro o vuelve más tarde para ver nuevos proyectos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer class="text-center text-white py-4" style="background-color: #1b5e20;">
+    <p class="mb-1">© 2025 Asociación Regional de Usuarios Campesinos del Suroccidente Colombiano (ARUC DE COLOMBIA)</p>
+    <p class="small">
+      <a href="politica_de_privacidad.html" class="text-white text-decoration-underline">Política de Privacidad</a> |
+      <a href="terminos_condiciones.html" class="text-white text-decoration-underline">Términos y Condiciones</a>
+    </p>
+    <div>
+      <a href="https://www.facebook.com/share/14SqWHbb2Cb/" class="text-white me-3" target="_blank"><i
+          class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/aruccolombia?igsh=MWo0NTBidzJrdDEwdg==" class="text-white me-3"
+        target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="mailto:cooperativaaruc@gmail.com" class="text-white"><i class="bi bi-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filtros = document.querySelectorAll('.btn-filtro');
+      const proyectos = document.querySelectorAll('.proyecto-item');
+      const emptyState = document.getElementById('empty-state');
+
+      filtros.forEach(filtro => {
+        filtro.addEventListener('click', function () {
+          // Actualizar botones activos
+          filtros.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+
+          const filtroSeleccionado = this.getAttribute('data-filter');
+
+          // Mostrar/ocultar proyectos según el filtro
+          let proyectosVisibles = 0;
+
+          proyectos.forEach(proyecto => {
+            if (filtroSeleccionado === 'todos' || proyecto.getAttribute('data-estado') === filtroSeleccionado) {
+              proyecto.style.display = 'block';
+              proyectosVisibles++;
+            } else {
+              proyecto.style.display = 'none';
+            }
+          });
+
+          // Mostrar estado vacío si no hay proyectos visibles
+          if (proyectosVisibles === 0) {
+            emptyState.classList.remove('d-none');
+          } else {
+            emptyState.classList.add('d-none');
+          }
+        });
+      });
+
+      // Efecto scroll para navbar
+      window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar-custom');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
